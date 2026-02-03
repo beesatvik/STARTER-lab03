@@ -217,9 +217,7 @@ bool IntBST::remove(int value){
 
     if(n->left!=nullptr && n->right!=nullptr){
         Node* s = getSuccessorNode(n->info);
-        int temp = n->info;
         n->info = s->info;
-        s->info = temp;
         n = s;
     }
 
